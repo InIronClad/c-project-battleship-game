@@ -22,8 +22,10 @@ void welcome_screen(void);
 void initialize_game_board(char board[][10], int row_size, int col_size);
 void print_board(char board[][10], int row_size, int col_size);
 void select_who_starts_first(void);
-int manually_place_ships_on_board(void);
-void randomly_place_ships_on_board(void);
+int manually_place_ships_on_board(char board[][10], int row_start, int col_start, Direction dir,
+	char ship_symbol, int length);
+void randomly_place_ships_on_board(int *row_start, int *col_start, Direction dir,
+	int length);
 void check_shot(void);
 void is_winner(void);
 void update_board(void);
